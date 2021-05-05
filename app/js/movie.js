@@ -1,5 +1,5 @@
 function getShow(){
-    let showId = 10;
+    let showId = localStorage.getItem('showid');
   
     $.get('http://aravichandiran01.lampt.eeecs.qub.ac.uk/flixtime/api/shows/show.php?showid='+showId)
       .then((response) => {

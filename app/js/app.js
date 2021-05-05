@@ -4,11 +4,12 @@
 
 $(document).ready(() => {
     $("#searchForm").submit((e) => {
+        //document.getElementById('masonry').innerHTML = '';
         let searchText = $("#searchText").val();
         let results = search(searchText);
         let output = ``;
-        $("masonry").append(output);
-        $("masonry").append("hello");
+        //$("#masonry").append(output);
+        //$("#masonry").append("hello");
         e.preventDefault();
     });
 })
@@ -29,19 +30,17 @@ function search(searchText) {
             
             if(result.movies.length>0){
                 $.each(result.movies, function(i, movie){
-
-                    show = getShow(movie.URL);
-                    output += showCard(show);
+                    output += showCard(movie);
                 });
             } 
             if(result.tvshows.length> 0){
                 $.each(result.tvshows, function(i, tvshow){
-                    show = getShow(tvshow.URL);
-                    output += showCard(show);
+                    output += showCard(tvshow);
                 });
             }
         console.log(output);
         
+        $("#masonry").append(output);
         },
         error: function(xhr, status, error) {
             var errorMessage = xhr.status + ': ' + xhr.statusText
@@ -49,33 +48,9 @@ function search(searchText) {
         }
     });
 
-    return output;
+    //return output;
 }
 
-/**
- * gets individual show
- * @param {*} geturl 
- */
-function getShow(geturl) {
-
-    let show = {};
-    $.ajax({
-        method: 'GET',
-        url: geturl,
-        dataType: 'json',
-        success: function(response) {
-            if(response.data.length > 0) {
-                show = response.data[0];
-            }  
-        },
-        error: function(xhr, status, error) {
-            var errorMessage = xhr.status + ': ' + xhr.statusText
-            console.log('Error - ' + errorMessage);
-        }
-    });
-
-    return show;
-}
 
 /**
  * returns if an object is empty or not
@@ -92,6 +67,10 @@ function isEmpty(obj) {
  * @returns 
  */
 function showCard(show) {
-    var poster_url = show.poster_url == "NULL" ? "https://via.placeholder.com/150" : show.poster_ul;
+    
+    var poster_url = '';
+    if(show.poster_url != "NULL") {
+        poster_url = show.poster_url;
+    }
     return `<div class="item"><div><article class="card"><img src="${poster_url}"><footer><h3>${show.Title}</h3><button>Movie Details</button></footer></article></div></div>`;
 }

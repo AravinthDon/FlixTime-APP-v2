@@ -1,6 +1,0 @@
-/** 
- * Returns the show card 
- * 
-*/
-
-
