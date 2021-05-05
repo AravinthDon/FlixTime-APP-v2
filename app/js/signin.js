@@ -21,7 +21,7 @@ $(document).ready( () => {
 function signin(username, password) {
     
     let user = {};
-
+    
     var formData = {
         username: username,
         password: password,
@@ -51,6 +51,7 @@ function signin(username, password) {
 
             } else if(data.status == "Error") {
                 console.log(data);
+                $("#message").empty();
                 $("#message").append(`<p>${data.message}</p>`);
                 //alert(data.message);
             }

@@ -1,48 +1,54 @@
 /* Box-sizing reset: //w3bits.com/?p=3225 */
 html {
     box-sizing: border-box;
-  }
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
+    height: 100%;
+}
+
+body{
+  height: 100%;
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
   
   /* The Masonry Container */
-  .masonry {
-    margin: 1.5em auto;
-    max-width: 768px;
-    column-gap: 1.5em;
-  }
+.masonry {
+  margin: 1.5em auto;
+   max-width: 768px;
+  column-gap: 1.5em;
+}
   
   /* The Masonry Brick */
-  .item {
-    background: #fff;
-    padding: 1em;
-    margin: 0 0 1.5em;
-  }
+.item {
+  background: #fff;
+  padding: 1em;
+  margin: 0 0 1.5em;
+}
   
-  /* Masonry on large screens */
-  @media only screen and (min-width: 1024px) {
-    .masonry {
-      column-count: 4;
-    }
+/* Masonry on large screens */
+@media only screen and (min-width: 1024px) {
+  .masonry {
+    column-count: 4;
   }
+}
   
-  /* Masonry on medium-sized screens */
-  @media only screen and (max-width: 1023px) and (min-width: 768px) {
-    .masonry {
-      column-count: 3;
-    }
+/* Masonry on medium-sized screens */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .masonry {
+    column-count: 3;
   }
+}
   
-  /* Masonry on small screens */
-  @media only screen and (max-width: 767px) and (min-width: 540px) {
-    .masonry {
-      column-count: 2;
-    }
+/* Masonry on small screens */
+@media only screen and (max-width: 767px) and (min-width: 540px) {
+  .masonry {
+    column-count: 2;
   }
+}
 
 #movies img, #movie img{
     width:100%;
@@ -57,4 +63,32 @@ html {
       height:240px;
     }
   }
-  
+
+.wrap {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* style for the movie card */
+.movie-card-container {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.movie-card-container img {
+  width: 100%;
+  height: 100%;
+}
+.movie-card {
+  flex: 1;
+}
+.movie-name {
+  height: 20px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

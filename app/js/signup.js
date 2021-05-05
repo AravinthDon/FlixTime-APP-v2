@@ -58,10 +58,3 @@ function signup(username, password) {
 
 }
 
-    
-function is_logged_in() {
-    if(sessionStorage.getItem('user_id') === null && sessionStorage.getItem('api_key') === null) {
-        return false;
-    } 
-    return true;
-}

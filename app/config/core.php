@@ -12,6 +12,7 @@
     $SIGNIN_URL = $HOME_URL. "signin.php";
 
     $SIGNUP_URL = $HOME_URL. "signup.php";
+    $LOGOUT_URL = $HOME_URL. "logout.php";
 
     $root = $_SERVER['DOCUMENT_ROOT'];
     // directories

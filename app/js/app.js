@@ -28,8 +28,11 @@ function search(searchText) {
             result.movies = response.results.Movies;
             result.tvshows = response.results.TV_Shows;
             
+            let counter = 0;
             if(result.movies.length>0){
+
                 $.each(result.movies, function(i, movie){
+                    counter++;
                     output += showCard(movie);
                 });
             } 
@@ -38,9 +41,10 @@ function search(searchText) {
                     output += showCard(tvshow);
                 });
             }
-        console.log(output);
-        
-        $("#masonry").append(output);
+            console.log(output);
+            
+            $("#masonry").empty();
+            $("#masonry").append(output);
         },
         error: function(xhr, status, error) {
             var errorMessage = xhr.status + ': ' + xhr.statusText
@@ -71,6 +75,17 @@ function showCard(show) {
     var poster_url = '';
     if(show.poster_url != "NULL") {
         poster_url = show.poster_url;
+    } else {
+        poster_url = "https://via.placeholder.com/150";
     }
-    return `<div class="item"><div><article class="card"><img src="${poster_url}"><footer><h3>${show.Title}</h3><button>Movie Details</button></footer></article></div></div>`;
+    //return `<div class="item"><div><article class="card"><img src="${poster_url}"><footer><h3>${show.Title}</h3><button>Movie Details</button></footer></article></div></div>`;
+    // return `<div class="movie-card-container">
+    //             <div class="movie-card">
+    //                 <img src="${poster_url}" />
+    //             </div>
+    //             <div class="movie-name">
+    //                 ${show.Title}
+    //             </div>
+    //         </div>`;
+    return `<div class="movie-card-container"><div class="content-wrap col-lg-3 col-md-3 col-sm-6 col-xs-12 col-centered"><a href="#"><img src="${poster_url}"><div><p>Movie Title${show.title}</p></div></a></div></div>`;
 }

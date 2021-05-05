@@ -1,6 +1,5 @@
 
 <?php
-
     echo "<header>
             <!-- Navigation bar-->
             <nav class='navbar navbar-expand-lg navbar-light'>
@@ -24,8 +23,11 @@
                   <li class='nav-item'>
                     <a class='nav-link' href={$TVSHOWS_URL}>TV Shows</a>
                   </li>
-                  <li class='nav-item'>
+                  <li class='nav-item' id='signin'>
                     <a class='nav-link' href={$SIGNIN_URL}>Sign in</a>
+                  </li>
+                  <li class='nav-item' id='logout'>
+                    <a class='nav-link' href={$LOGOUT_URL}>Log out</a>
                   </li>
                 </ul>
               </div>
