@@ -38,7 +38,7 @@ function signup(username, password) {
                 user.api_key = data.data.api_key;
                 
                 //console.log(data);
-                sessionStorage.setItem("user_id", user.user_id);
+                sessionStorage.setItem("user_id", int(user.user_id));
                 sessionStorage.setItem("api_key", user.api_key);
                 window.location.href = "index.php";
 

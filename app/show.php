@@ -27,14 +27,25 @@
     include($components."header.php");
   ?>
 
-  <div class="container">
-    <div id="movie" class="well"></div>
-  </div>
+  <!-- Top Pagination bar -->
+  <?php
+    include($components."pagination.php");
+  ?>
+  <!-- Movie list to be filled -->
+  <div id="columns">
 
+  </div>
+  
+  <!-- Bottom Pagination bar -->
+  <?php
+    include($components."pagination.php");
+  ?>
+  <!-- Footer -->
+  <?php
+    include($components."footer.php");
+  ?>
   <?php include($components."script.php"); ?>
-  <script>
-    getMovie();
-  </script>
+  <script src="js/shows.js"></script>
 </body>
 
 </html>

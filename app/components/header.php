@@ -18,10 +18,7 @@
                     <a class='nav-link' href={$HOME_URL}>Home</a>
                   </li>
                   <li class='nav-item'>
-                    <a class='nav-link' href={$MOVIES_URL}>Movies</a>
-                  </li>
-                  <li class='nav-item'>
-                    <a class='nav-link' href={$TVSHOWS_URL}>TV Shows</a>
+                    <a class='nav-link' href={$SHOWS_URL}>Shows</a>
                   </li>
                   <li class='nav-item' id='signin'>
                     <a class='nav-link' href={$SIGNIN_URL}>Sign in</a>

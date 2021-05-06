@@ -5,6 +5,8 @@
 
     $SEARCH_URL = $HOME_URL. "search.php";
 
+    $SHOWS_URL = $HOME_URL. "show.php";
+    
     $MOVIES_URL = $HOME_URL. "show.php?movies";
 
     $TVSHOWS_URL = $HOME_URL. "show.php?tvshows";
