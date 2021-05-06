@@ -49,8 +49,8 @@ function renderShows() {
                     output += showCard(show);
                 });
                 //console.log(output);
-                $("#columns").empty();
-                $("#columns").append(output);
+                $("#masonry").empty();
+                $("#masonry").append(output);
             }
         }). catch((err) => {
             console.log(err);
@@ -83,12 +83,23 @@ function getPageType() {
     }
     
     //return `<div class="movie-card-container"><div class="content-wrap col-lg-3 col-md-3 col-sm-6 col-xs-12 col-centered"><a href="#"><img src="${poster_url}"><div><p>${show.Title}</p></div></a></div></div>`;
-    return `<figure>
+    // return `<figure>
+    //             <a href="#" onclick="movieSelected(${show.show_id})">
+    //             <img src=${poster_url}>
+    //             <figcaption>${show.Title}</figcaption>
+    //             </a>
+    //         </figure>`;
+
+    return `<div class="movie-card-container" style="display: flex;flex-direction: column;align-items: center;justify-content: center;width: 100;">
                 <a href="#" onclick="movieSelected(${show.show_id})">
-                <img src=${poster_url}>
-                <figcaption>${show.Title}</figcaption>
+                        <div class = "movie-card">
+                                        <div class="img-wrapper">
+                                            <img src="${poster_url}"> 
+                                        </div>
+                                        <p>${show.Title}</p>
+                        </div>
                 </a>
-            </figure>`;
+            </div>`;
 }
 
 function movieSelected(id){

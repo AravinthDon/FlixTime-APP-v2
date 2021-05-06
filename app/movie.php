@@ -30,7 +30,8 @@
           </div>
         </div>
     </div>
-
+    
+    <?php include($components."footer.php"); ?>
     <?php include($components."script.php"); ?>
     <script src="js/movie.js"></script>
 </body>

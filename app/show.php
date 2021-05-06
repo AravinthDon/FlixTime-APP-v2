@@ -32,8 +32,7 @@
     include($components."pagination.php");
   ?>
   <!-- Movie list to be filled -->
-  <div id="columns">
-
+  <div class="masonry" id="masonry">
   </div>
   
   <!-- Bottom Pagination bar -->

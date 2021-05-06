@@ -87,5 +87,16 @@ function showCard(show) {
     //                 ${show.Title}
     //             </div>
     //         </div>`;
-    return `<div class="movie-card-container"><div class="content-wrap col-lg-3 col-md-3 col-sm-6 col-xs-12 col-centered"><a href="#"><img src="${poster_url}"><div><p>${show.Title}</p></div></a></div></div>`;
+    //return `<div class="movie-card-container"><div class="content-wrap col-lg-3 col-md-3 col-sm-6 col-xs-12 col-centered"><a href="#"><img src="${poster_url}"><div><p>${show.Title}</p></div></a></div></div>`;
+
+    return `<div class="movie-card-container" style="display: flex;flex-direction: column;align-items: center;justify-content: center;width: 100;">
+                <a href="#">
+                        <div class = "movie-card">
+                                        <div class="img-wrapper">
+                                            <img src="${poster_url}"> 
+                                        </div>
+                                        <p>${show.Title}</p>
+                        </div>
+                </a>
+            </div>`;
 }
