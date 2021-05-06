@@ -101,3 +101,12 @@ body{
   margin-right: 0px;
   padding: 20px 0px;
 }
+
+.jumbo-wrap {
+  height: 80vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #dfe3e6;
+}

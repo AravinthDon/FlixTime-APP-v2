@@ -31,3 +31,10 @@ body {
 .jumbotron .row {
     height: 100%;
 }
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

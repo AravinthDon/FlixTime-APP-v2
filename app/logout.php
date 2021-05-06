@@ -1,6 +1,4 @@
-<?php
-    echo "You are being logged out...";
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

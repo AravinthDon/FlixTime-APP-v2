@@ -20,10 +20,7 @@
 
     <div class="container">
         <div class = "jumbotron">
-            <div class="row">
-                <div class="col-md-6">
-
-                </div>
+            <div class="row form-row">
                 <div class="col-md-6 form-div">
                     <div class="login-form">
                         <form id = "signupForm">

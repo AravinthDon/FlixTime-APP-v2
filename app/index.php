@@ -17,33 +17,41 @@
 </head>
 
 <body>
-  <div class="background-wrap"> 
       <?php 
         include($components."header.php"); 
       ?>
-      <div class="wrap">
-        <div class="container">
+      <div class="jumbo-wrap">
+        <div class="jumbotron" style="background-color: #8c9ba5;">
             <section class="search-area aligh-items-center">
                 <!-- Using grids to position -->
-                <div class="row label-row">
-                  <div class="col-lg-12">
-                    <h2>Search for your favorite movies and TV Shows</h2>
-                  </div>
+                <div class="row">
+                    <div style="text-align: center;" class="col-lg-12 col-md-12">
+                        <h1>Search for your favorite movies and TV Shows</h1>
+                        <div class="row justify-content-center">
+                            <div class="col-md-10 col-lg-12">
+                                <form class="card card-sm" id="searchForm">
+                                    <div class="card-body row no-gutters align-items-center">
+                                        
+                                        <!--end of col-->
+                                        <div class="col">
+                                            <input id="searchText" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Eg: Marvel's Avengers">
+                                        </div>
+                                        <!--end of col-->
+                                        <div class="col-auto">
+                                            <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                        </div>
+                                        <!--end of col-->
+                                    </div>
+                                </form>
+                            </div>
+                            <!--end of col-->
+                        </div>
+                    </div>
                 </div>
-                <div class="row search-row"> 
-                      <div class="col-lg-12">
-                              <form id="searchForm">
-                                    <input id="searchText" type="search" placeholder="Eg: Avengers">
-                                    <button class="btn btn-lg btn-success" type="submit">Search</button>
-                              </form>
-                      </div>
-                </div>
-              </section>
-        </div>
+        </section></div>
+        
       </div>
-  </div>
-  
-  
+
     <div class="masonry" id="masonry">
     </div>
 

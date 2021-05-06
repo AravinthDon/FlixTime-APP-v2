@@ -22,12 +22,8 @@
     
     <div class="container">
         <div class="jumbotron">
-            <div class="row"> 
-                <div class="col-md-6">
-
-                </div>
-
-                <div class="col-md-6 form-div">
+            <div class="row form-row"> 
+                <div class="col-md-6 col-lg-6 form-div">
                     <div class="login-form">
                         <form id = "signinForm">
                             <h2 class="text-center">Sign in</h2> 
